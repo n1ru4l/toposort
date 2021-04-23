@@ -17,7 +17,7 @@ This library also provides CommonJS and ES Module builds.
 ## Install
 
 ```bash
-yarn install -E @n1ru4l/toposort
+yarn add -E @n1ru4l/toposort
 ```
 
 ## Usage
