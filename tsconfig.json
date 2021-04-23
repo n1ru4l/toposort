@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "preserve",
+    "noEmit": true,
+    "target": "ES2015"
+  },
+  "include": ["src"]
+}

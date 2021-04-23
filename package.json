@@ -1,0 +1,54 @@
+{
+  "name": "@n1ru4l/toposort",
+  "version": "0.0.1",
+  "description": "toposort using modern ecma script data structures",
+  "main": "index.js",
+  "author": "n1ru4l",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./main.js",
+      "require": "./cjs/main.js"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
+  },
+  "types": "./main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n1ru4l/toposort"
+  },
+  "keywords": [
+    "toposort",
+    "dependency",
+    "dag",
+    "dependency list",
+    "topological sort",
+    "sort",
+    "concurrency",
+    "graph",
+    "directed acyclic graph"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "2.16.0",
+    "@rollup/plugin-typescript": "8.2.0",
+    "@types/jest": "26.0.20",
+    "cpy-cli": "3.1.1",
+    "cross-env": "7.0.3",
+    "jest": "26.6.3",
+    "prettier": "2.2.1",
+    "rimraf": "3.0.2",
+    "rollup": "2.40.0",
+    "ts-jest": "26.5.3",
+    "tslib": "2.2.0",
+    "typescript": "4.2.4"
+  },
+  "scripts": {
+    "build:cjs": "cross-env MODE=cjs rollup -c",
+    "build:esm": "rollup -c",
+    "build": "rimraf dist && yarn build:cjs && yarn build:esm && cpy README.md ./dist",
+    "test": "jest",
+    "type-check": "tsc",
+    "release": "changeset publish"
+  }
+}
