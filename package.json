@@ -43,7 +43,7 @@
     "rollup": "2.46.0",
     "ts-jest": "26.5.5",
     "tslib": "2.2.0",
-    "typescript": "4.2.4"
+    "typescript": "4.3.2"
   },
   "scripts": {
     "build:cjs": "cross-env MODE=cjs rollup -c",
