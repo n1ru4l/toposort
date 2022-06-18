@@ -30,7 +30,7 @@
     "directed acyclic graph"
   ],
   "devDependencies": {
-    "@changesets/cli": "2.16.0",
+    "@changesets/cli": "2.23.0",
     "@rollup/plugin-typescript": "8.2.5",
     "@types/jest": "26.0.23",
     "cpy-cli": "3.1.1",
