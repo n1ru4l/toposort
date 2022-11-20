@@ -31,7 +31,7 @@
   ],
   "devDependencies": {
     "@changesets/cli": "2.16.0",
-    "@rollup/plugin-typescript": "8.2.5",
+    "@rollup/plugin-typescript": "8.5.0",
     "@types/jest": "26.0.23",
     "cpy-cli": "3.1.1",
     "cross-env": "7.0.3",
