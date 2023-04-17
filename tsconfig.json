@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "strict": true,
     "alwaysStrict": true,
     "module": "node16",
     "target": "ES2020",
     "jsx": "preserve",
-    "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": true
   },
   "include": ["src"]
 }
