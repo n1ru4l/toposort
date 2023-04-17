@@ -2,16 +2,34 @@
   "name": "@n1ru4l/toposort",
   "version": "0.0.1",
   "description": "toposort using modern ecma script data structures",
-  "main": "index.js",
-  "author": "n1ru4l",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/typings/index.d.ts",
+  "typescript": {
+    "definition": "dist/typings/index.d.ts"
+  },
+  "author": {
+    "name": "Laurin Quast",
+    "email": "laurinquast@googlemail.com"
+  },
   "license": "MIT",
+  "type": "module",
   "exports": {
     ".": {
-      "import": "./main.js",
-      "require": "./cjs/main.js"
+      "import": {
+        "types": "./dist/typings/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/typings/index.d.cts",
+        "default": "./dist/cjs/index.js"
+      },
+      "default": {
+        "types": "./dist/typings/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
     },
-    "./package.json": "./package.json",
-    "./": "./"
+    "./package.json": "./package.json"
   },
   "types": "./main.d.ts",
   "repository": {
@@ -31,24 +49,20 @@
   ],
   "devDependencies": {
     "@changesets/cli": "2.16.0",
-    "@rollup/plugin-typescript": "8.2.5",
     "@types/jest": "26.0.23",
-    "cpy-cli": "3.1.1",
+    "bob-the-bundler": "6.0.0",
     "cross-env": "7.0.3",
     "husky": "4.3.8",
     "jest": "26.6.3",
     "lint-staged": "10.5.4",
     "prettier": "2.3.2",
     "rimraf": "3.0.2",
-    "rollup": "2.56.2",
     "ts-jest": "26.5.5",
     "tslib": "2.2.0",
-    "typescript": "4.3.4"
+    "typescript": "5.0.4"
   },
   "scripts": {
-    "build:cjs": "cross-env MODE=cjs rollup -c",
-    "build:esm": "rollup -c",
-    "build": "rimraf dist && yarn build:cjs && yarn build:esm && cpy README.md ./dist",
+    "build": "bob build",
     "test": "jest",
     "type-check": "tsc",
     "release": "changeset publish",
