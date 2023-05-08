@@ -1,4 +1,4 @@
-import { toposort as batchingToposort, toposortReverse } from "./toposort";
+import { toposort as batchingToposort, toposortReverse } from "./toposort.js";
 
 describe("toposort", () => {
   it("toposorts an empty graph", () => {
