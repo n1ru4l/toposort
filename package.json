@@ -12,6 +12,9 @@
     "name": "Laurin Quast",
     "email": "laurinquast@googlemail.com"
   },
+  "engines": {
+    "node": ">= 16.x.x"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
