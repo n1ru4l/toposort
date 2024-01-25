@@ -13,7 +13,7 @@ jobs:
         with:
           path: node_modules
           key: 14.x-${{ runner.OS }}-build-${{ hashFiles('yarn.lock') }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: "14.x"
           registry-url: "https://registry.npmjs.org"
