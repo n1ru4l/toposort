@@ -48,7 +48,7 @@
     "directed acyclic graph"
   ],
   "devDependencies": {
-    "@changesets/cli": "2.16.0",
+    "@changesets/cli": "2.27.9",
     "@types/jest": "26.0.23",
     "bob-the-bundler": "6.0.0",
     "cross-env": "7.0.3",
